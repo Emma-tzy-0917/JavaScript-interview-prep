@@ -120,8 +120,24 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
 4. Undefined
 5. Boolean
 
-### JS Object Types
+### JS Object型 Types
 1. Function Object
+
+  * 注意Function Declaration 和 Function Expression的区别
+  * 1 有没有Hoisting：Declaration有，Expression没有。
+  * 2 Self-Invoking的区别：
+    expression：可以直接在后面加()来invoke；declaration需先括号扩住再在后面加括号
+  ```javascript
+  var a = function(){
+    console.log(4);
+  }();
+
+  (function(){
+    console.log(4);
+  })();
+  ```
+
+
 2. String Object
 3. Boolean Object
 4. Number Object
