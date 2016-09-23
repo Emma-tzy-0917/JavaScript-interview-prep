@@ -2,18 +2,6 @@
 
 This project aims to create notes for basic javascript syntax and usages (ECMAScript5). Things about ES6, Angular2, etc is excluded in the current project.
 
-## JavaScript Data Types
-
-### JS primitive types 
-1. String
-2. Number
-3. Null
-4. Undefined
-5. Boolean
-
-### JS references
-
-
 ## JavaScript Browser BOM
 
 ### Window
@@ -29,6 +17,8 @@ This project aims to create notes for basic javascript syntax and usages (ECMASc
 ## JS String object methods
 
 ## JS Array object methods
+
+
 
 ## JS output
 
@@ -73,9 +63,9 @@ NOTE: IMPORTANT! Calling document.write AFTER a html is loaded will wipe out all
 4. 保留字不能用
 
 ### Variable declaration
-1. Declaration会被提升到最上方先执行，但是赋值还是在原本代码的位置。
-2. 注意Function declaration会连带花括号里的内容一起被提前。
-3. 如果function使用statement方式赋值，那么在赋值前试图访问该函数会报错。
+1. Declaration会被提升(hoisting)到最上方先执行，但是赋值还是在原本代码的位置。
+2. 注意Function declaration会连带花括号里的内容一起被提前。  --声明
+3. 如果function使用expression方式赋值，那么在赋值前试图访问该函数会报错。 --赋值
 
 ```javascript
 console.log(carName); // output "undefined". Assignment is not done yet.
@@ -84,7 +74,7 @@ console.log(carName); // output "Benz"
 var carName;
 
 console.log(f()); // output 3;
-console.log(g()); // output 运行报错，g不是一个function, 因为赋值还没有发生
+console.log(g()); // output 运行报错，g不是一个function, 因为赋值还没有发生; 而（）operater会invoke一个function, 所以会报错
 function f(){
     return 3;
 }
@@ -120,3 +110,40 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
   * Note: NaN == NaN 以及 NaN === NaN 都是false.
 
 3. typeof and instanceof是JS的type operators，具体内容会在JS data types里说明。
+
+## JavaScript Data Types
+
+### JS primitive types 
+1. String
+2. Number
+3. Null
+4. Undefined
+5. Boolean
+
+### JS Object Types
+1. Function Object
+2. String Object
+3. Boolean Object
+4. Number Object
+5. Array Object
+6. Date Object
+7. Math Object
+
+
+
+### JS references
+1. String
+2. Number
+3. Operator
+4. Statement
+5. Math
+6. Date
+7. Array
+8. Boolean
+9. RegExp
+10. Global
+11. Conversion
+
+
+
+
