@@ -73,13 +73,25 @@ NOTE: IMPORTANT! Calling document.write AFTER a html is loaded will wipe out all
 4. 保留字不能用
 
 ### Variable declaration
-Declaration会被提升到最上方先执行，但是赋值还是在原本代码的位置。
+1. Declaration会被提升到最上方先执行，但是赋值还是在原本代码的位置。
+2. 注意Function declaration会连带花括号里的内容一起被提前。
+3. 如果function使用statement方式赋值，那么在赋值前试图访问该函数会报错。
+
 ```javascript
 console.log(carName); // output "undefined". Assignment is not done yet.
 var carName = "Benz";
 console.log(carName); // output "Benz"
 var carName;
 
+console.log(f()); // output 3;
+console.log(g()); // output 运行报错，g不是一个function, 因为赋值还没有发生
+function f(){
+    return 3;
+}
+var g = function(){
+    return 4;
+}
+console.log(g()); // output 4，赋值已发生，g是一个function
 ```
 Note: 如果输出一个没有被声明过的变量会报错（测试过chrome以及node cmdline tool）.
     如果输出一个被声明过的变量(没有赋值)会输出undefined.
@@ -105,6 +117,6 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
 2. Comparison Operators ( == And ===)
   * == means equal value 仅仅比较值
   * === means equal value and equal type 值和类型都要相等
-Note: NaN == NaN 以及 NaN === NaN 都是false.
+  * Note: NaN == NaN 以及 NaN === NaN 都是false.
 
 3. typeof and instanceof是JS的type operators，具体内容会在JS data types里说明。
