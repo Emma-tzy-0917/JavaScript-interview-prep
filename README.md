@@ -87,13 +87,13 @@ Note: 如果输出一个没有被声明过的变量会报错（测试过chrome�
 ### JS Arithmetic Operators
 Most of JS artithmetic operators are the same with other commonly used languages (eg. Java). Here only special characterstics will be noted.
 
-1. +
+1. + Adding
 
-   Adding numbers
+  * Adding numbers
 
-   Connecting strings
+  * Connecting strings
 
-   Rules: from left to right
+  * Rules: from left to right
 
 ```javascript
 console.log(3+3); // output 6
