@@ -95,13 +95,12 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
 
   * Rules: from left to right
 
-```javascript
-console.log(3+3); // output 6
-console.log('Hello'+' World'); // output Hello World
-console.log(3+3+' hello'); // output 6 hello
-console.log('Hello '+3+3); // output Hello 33
-
-```
+   ```javascript
+   console.log(3+3); // output 6
+   console.log('Hello'+' World'); // output Hello World
+   console.log(3+3+' hello'); // output 6 hello
+   console.log('Hello '+3+3); // output Hello 33
+   ```
 
 2. Comparison Operators ( == And ===)
   * == means equal value 仅仅比较值
