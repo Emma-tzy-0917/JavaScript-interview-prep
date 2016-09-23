@@ -84,8 +84,8 @@ var carName;
 Note: 如果输出一个没有被声明过的变量会报错（测试过chrome以及node cmdline tool）.
     如果输出一个被声明过的变量(没有赋值)会输出undefined.
 
-### JS Arithmetic Operators
-Most of JS artithmetic operators are the same with other commonly used languages (eg. Java). Here only special characterstics will be noted.
+### JS Operators
+Most of JS operators are the same with other commonly used languages (eg. Java). Here only special characterstics will be noted.
 
 1. + Adding
 
@@ -103,3 +103,9 @@ console.log('Hello '+3+3); // output Hello 33
 
 ```
 
+2. Comparison Operators ( == And ===)
+  * == means equal value 仅仅比较值
+  * === means equal value and equal type 值和类型都要相等
+Note: NaN == NaN 以及 NaN === NaN 都是false.
+
+3. typeof and instanceof是JS的type operators，具体内容会在JS data types里说明。
