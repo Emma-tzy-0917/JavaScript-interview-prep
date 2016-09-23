@@ -81,5 +81,7 @@ console.log(carName); // output "Benz"
 var carName;
 
 ```
+Note: 如果输出一个没有被声明过的变量会报错（测试过chrome以及node cmdline tool）.
+      如果输出一个被声明过的变量(没有赋值)会输出undefined.
 
 
