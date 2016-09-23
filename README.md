@@ -32,19 +32,34 @@ This project aims to create notes for basic javascript syntax and usages (ECMASc
 
 ## JS output
 
-1. console.log: displaying content in browser console
+###1. console.log: displaying content in browser console
 
-2. alert: writing into alert box
+###2. alert: writing into alert box
 
-3. document.write: writing to htm
+###3. document.write: writing to html
 ```html
 <h1> I AM TITLE </h1>
 
 <script>
-    document.write(5 + 6)
-    document.write("<h3> HEY I'm here! </h3>")
+    document.write(5 + 6);
+    document.write("<h3> HEY I'm here! </h3>");
 </script>
 
 <p> I'm content. </p>
 ```
+NOTE: IMPORTANT! Calling document.write AFTER a html is loaded will wipe out all existing html.
 
+###4. innerHTML: writing to an html element
+```html
+<h1 id="title"> I AM TITLE </h1>
+
+<script>
+    document.getElementById("title").innerHTML = "I AM NEW";
+    document.getElementsByClassName("content").innerHTML = "I'm new content";
+</script>
+
+<p class="content"> I'm content. </p>
+<p class="content"> I'm content. </p>
+<p class="content"> I'm content. </p>
+<p> I'm content. </p>
+```
