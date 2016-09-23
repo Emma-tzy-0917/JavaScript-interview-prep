@@ -74,7 +74,7 @@ console.log(carName); // output "Benz"
 var carName;
 
 console.log(f()); // output 3;
-console.log(g()); // output 运行报错，g不是一个function, 因为赋值还没有发生; 而（）operater会invoke一个function, 所以会报错
+console.log(g()); // output 运行报错，因为()会invoke一个function, 而g不是一个function, 因为赋值还没有发生; 
 function f(){
     return 3;
 }
@@ -123,7 +123,7 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
 ### JS Object型 Types
 1. Function Object
 
-  * 注意Function Declaration 和 Function Expression的区别
+  注意Function Declaration 和 Function Expression的区别
   * 1 有没有Hoisting：Declaration有，Expression没有。
   * 2 Self-Invoking的区别：
     expression：可以直接在后面加()来invoke；declaration需先括号扩住再在后面加括号
