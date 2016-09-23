@@ -67,7 +67,7 @@ NOTE: IMPORTANT! Calling document.write AFTER a html is loaded will wipe out all
 ## JS basic syntax
 
 ### JS identifiers (names/命名规则)
-1. First character MUST be a letter, _ or $. (Number is not allowed)
+1. First character *MUST* be a letter, _ or $. (Number is not allowed)
 2. Hyphen cannot be used in names. Often using Camel Case (starting with a lowercase letter). Eg: firstName.
 3. Case sensitive
 4. 保留字不能用
@@ -82,6 +82,6 @@ var carName;
 
 ```
 Note: 如果输出一个没有被声明过的变量会报错（测试过chrome以及node cmdline tool）.
-      如果输出一个被声明过的变量(没有赋值)会输出undefined.
+    如果输出一个被声明过的变量(没有赋值)会输出undefined.
 
 
