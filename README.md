@@ -63,3 +63,23 @@ NOTE: IMPORTANT! Calling document.write AFTER a html is loaded will wipe out all
 <p class="content"> I'm content. </p>
 <p> I'm content. </p>
 ```
+
+## JS basic syntax
+
+### JS identifiers (names/命名规则)
+1. First character MUST be a letter, _ or $. (Number is not allowed)
+2. Hyphen cannot be used in names. Often using Camel Case (starting with a lowercase letter). Eg: firstName.
+3. Case sensitive
+4. 保留字不能用
+
+### Variable declaration
+Declaration会被提升到最上方先执行，但是赋值还是在原本代码的位置。
+```javascript
+console.log(carName); // output "undefined". Assignment is not done yet.
+var carName = "Benz";
+console.log(carName); // output "Benz"
+var carName;
+
+```
+
+
