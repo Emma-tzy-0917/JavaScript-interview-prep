@@ -87,7 +87,7 @@ Note: 如果输出一个没有被声明过的变量会报错（测试过chrome�
 ### JS Operators
 Most of JS operators are the same with other commonly used languages (eg. Java). Here only special characterstics will be noted.
 
-1. + Adding
+1. +&nbspAdding
 
   * Adding numbers
 
