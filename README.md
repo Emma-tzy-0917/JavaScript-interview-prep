@@ -163,10 +163,10 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
   * 4) key word "this": the object that "owns" the function. （Construstor的this 指的是这个原型的实例对象.见收藏夹)
 
 #### 2. Function object methods
-   1) function.prototype.call
-   2) function.prototype.apply
-   3) function.prototype.bind
-   4) function.prototype.toString
+    1) function.prototype.call
+    2) function.prototype.apply
+    3) function.prototype.bind
+    4) function.prototype.toString
 
 
 
