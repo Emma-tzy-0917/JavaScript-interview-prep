@@ -231,9 +231,23 @@ apply()的妙用见 http://web.jobbole.com/83642/
 
 ##### 3) function.prototype.bind
 
+```javascript
+var myObject = {
+   emma:"Tan"
+}
+
+var emma = 0;
+function myFunction(a,b) {
+    var emma = 5;
+    return (a+b) + this.emma;
+}
+
+var a = myFunction.bind(myObject,1,2);
+a(); // output 3Tan
+```
 
 ##### 4) function.prototype.toString
-
+Function 的 toString是把整个function的内容给出
 
 
 ### JS Object型 2 -- String Object
