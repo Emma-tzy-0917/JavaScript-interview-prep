@@ -124,9 +124,9 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
 
 #### 1. 基本注意事项
 
-注意Function Declaration 和 Function Expression的区别
-     1） 有没有Hoisting：Declaration方式声明函数，函数体随着声明一起被提前。
-     2） Self-Invoking的区别：expression可以直接在后面加()来invoke；declaration需先括号扩住再在后面加括号
+##### 注意Function Declaration 和 Function Expression的区别
+   1） 有没有Hoisting：Declaration方式声明函数，函数体随着声明一起被提前。
+   2） Self-Invoking的区别：expression可以直接在后面加()来invoke；declaration需先括号扩住再在后面加括号
    ```javascript
    var a = function(){
      console.log(4);
@@ -137,7 +137,7 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
    })();
    ```
 
-  注意Function Object的特点
+##### 注意Function Object的特点
   * 1） 可使用arguments这个object，这样就不用管有几个parameters了；常用的property：arguments.length
   * 2) Arguments are passed by Value, Objects are passed by Reference(指针)
   ```javascript
