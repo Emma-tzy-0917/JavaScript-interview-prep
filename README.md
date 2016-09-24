@@ -124,9 +124,8 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
 1. Function Object
 
   注意Function Declaration 和 Function Expression的区别
-  * 1 有没有Hoisting：Declaration有，Expression没有。
-  * 2 Self-Invoking的区别：
-    expression：可以直接在后面加()来invoke；declaration需先括号扩住再在后面加括号
+  * 1） 有没有Hoisting：Declaration方式声明函数，函数体随着声明一起被提前。
+  * 2） Self-Invoking的区别：expression可以直接在后面加()来invoke；declaration需先括号扩住再在后面加括号
   ```javascript
   var a = function(){
     console.log(4);
@@ -136,6 +135,37 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
     console.log(4);
   })();
   ```
+
+  注意Function Object的特点
+  * 1） 可使用arguments这个object，这样就不用管有几个parameters了；常用的property：arguments.length
+  * 2) Arguments are passed by Value, Objects are passed by Reference(指针)
+  ```javascript
+  var obj1 = {"name":"Emma"},
+      obj2 = {"name":"Shawn"};
+  var str = "String Primitive";
+
+  function changeName(arg1,arg2,arg3){
+    arg1["name"] += " Tan";
+    arg1["age"] = 18;
+    arg2["name"] += " Li";
+    arg3 += " not Changed";
+    console.log(arg3); // output "String Primitive not Changed" 
+  }
+
+  changeName(obj1,obj2,str);
+
+  console.log(obj1); // output { name: 'Emma Tan', age: 18 }
+  console.log(obj2); // output { name: 'Shawn Li' }
+  console.log(str); // output String Primitive
+  ```  
+  * 3) typeof operator returns "function"; 而其他非 primitive 的 Object return “object”.
+  * 4） key word "this" (不只是function有，但function里最常用？？？)：the object that "owns" the function.
+
+  注意Invoke Function的四种方法
+  * 1） as a function
+  * 2） as a object's method
+  * 3） with a Function Method
+
 
 
 2. String Object
