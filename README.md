@@ -121,9 +121,7 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
 ### JS Object
 
   * 1. 除了primitive 类的，所有都是Object
-
   * 2. "this" in a function: the object that "owns" the function; “this” in an object: the object itselt（Constructor的this指的是这个原型的实例对象.见收藏夹).
-
   * 3. Object也可以使用for in 来历遍
    ```javascript
     var person = {fname:"John", lname:"Doe", age:25}; 
@@ -132,7 +130,6 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
         txt += person[x];
     }
    ``` 
-
   * 4. Accessing、Adding、Deleting property：
    ```javascript
    person.firstName； // access
@@ -141,7 +138,6 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
    person["lastName"] = "Tan"; // add
    delete person.lastName; // delete
    ```  
-
    * 5. Object的指针特性
 
 ### JS Object型 1 -- Function Object
