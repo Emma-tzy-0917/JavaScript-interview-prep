@@ -212,6 +212,7 @@ function myFunction() {
 
 console.log(myFunction.call(myObject)); // output Tan
 console.log(myFunction()); // output 0
+
 ```
 ##### 2) function.prototype.apply
 
@@ -228,6 +229,11 @@ function myFunction(a,b) {
 
 console.log(myFunction.apply(myObject,[1,2])); //output 3Tan
 console.log(myFunction(1,2)); // output 3
+
+var arr1 = [1,2];
+var arr2 = [3,4];
+arr1.push.apply(null,arr2); // 报错 Array.prototype.push called on null or undefined ？？为什么？
+
 ```
 apply()的妙用见 http://web.jobbole.com/83642/
 
