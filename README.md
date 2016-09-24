@@ -233,7 +233,7 @@ console.log(myFunction(1,2)); // output 3
 var arr1 = [1,2];
 var arr2 = [3,4];
 arr1.push.apply(null,arr2); // 报错 Array.prototype.push called on null or undefined ？？为什么？
-
+Math.max.apply(null,arr2); // 此处正常 不会报错
 ```
 apply()的妙用见 http://web.jobbole.com/83642/
 
