@@ -106,6 +106,8 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
   * == means equal value 仅仅比较值
   * === means equal value and equal type 值和类型都要相等
   * Note: NaN == NaN 以及 NaN === NaN 都是false.
+  * （待补充几个特例：undefined == null 为true；空的Object == 0 为false 等总结)
+  * （待补充conversion的总结）
 
 3. typeof and instanceof是JS的type operators，具体内容会在JS data types里说明。
 
@@ -138,7 +140,7 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
   person["lastName"] = "Tan"; // add
   delete person.lastName; // delete
   ```  
-  * 5. Object的指针特性
+  * 5. Object的指针特性 （待补充：deep clone）
 
 ### JS Object型 1 -- Function Object
 
@@ -191,7 +193,7 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
   console.log(str); // output String Primitive
   ```  
 
-  * 4） W3School上闭包的例子以及scope总结（待补充）
+  * 4） W3School上闭包的例子问滔滔，以及scope总结（待补充）(Node与浏览器的区别)
   
 #### 2. Function object methods
 
@@ -248,6 +250,7 @@ a(); // output 3Tan
 
 ##### 4) function.prototype.toString
 Function 的 toString是把整个function的内容给出
+（待补充其他Object的toString是怎么重写的）
 
 
 ### JS Object型 2 -- String Object
@@ -257,6 +260,7 @@ Function 的 toString是把整个function的内容给出
 ### JS Object型 6 -- Math Object
 ### JS Object型 7 -- Boolean Object
 ### JS Object型 8 -- Number Object
+（待补充：Number()和ParseInternet()的区别）
 
 ### Checking JS types
 
@@ -265,6 +269,10 @@ Function 的 toString是把整个function的内容给出
 2. instanceof
 
 3. toString
+(a.toString() and Object.prototype.toString.call(a))
+
+### JS 
+
 
 
 ### JS references
