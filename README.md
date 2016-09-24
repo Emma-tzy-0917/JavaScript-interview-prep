@@ -142,7 +142,9 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
    delete person.lastName; // delete
    ```  
 
-### JS Object型 -- Function Object
+   * 5. Object的指针特性
+
+### JS Object型 1 -- Function Object
 
 #### 1. 基本注意事项
 
@@ -192,22 +194,59 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
   console.log(obj2); // output { name: 'Shawn Li' }
   console.log(str); // output String Primitive
   ```  
+
+  * 4） W3School上闭包的例子以及scope总结（待补充）
   
 #### 2. Function object methods
+
 ##### 1) function.prototype.call
+
+```javascript
+var myObject = {
+   emma:"Tan"
+}
+
+var emma = 0;
+function myFunction() {
+    var emma = 5;
+    return this.emma;
+}
+
+console.log(myFunction.call(myObject)); // output Tan
+console.log(myFunction()); // output 0
+```
 ##### 2) function.prototype.apply
+
+、、、javascript
+var myObject = {
+   emma:"Tan"
+}
+
+var emma = 0;
+function myFunction(a,b) {
+    var emma = 5;
+    return (a+b) + this.emma;
+}
+
+console.log(myFunction.apply(myObject,[1,2])); //output 3Tan
+console.log(myFunction(1,2)); // output 3
+```
+apply()的妙用见 http://web.jobbole.com/83642/
+
 ##### 3) function.prototype.bind
+
+
 ##### 4) function.prototype.toString
 
 
 
-### JS Object型 -- String Object
-### JS Object型 -- Array Object
-### JS Object型 -- JSON Object
-### JS Object型 -- Date Object
-### JS Object型 -- Math Object
-### JS Object型 -- Boolean Object
-### JS Object型 -- Number Object
+### JS Object型 2 -- String Object
+### JS Object型 3 -- Array Object
+### JS Object型 4 -- JSON Object
+### JS Object型 5 -- Date Object
+### JS Object型 6 -- Math Object
+### JS Object型 7 -- Boolean Object
+### JS Object型 8 -- Number Object
 
 ### Checking JS types
 
