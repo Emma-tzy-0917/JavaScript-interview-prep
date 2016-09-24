@@ -269,9 +269,7 @@ Function 的 toString是把整个function的内容给出
 2. instanceof
 
 3. toString
-(a.toString() and Object.prototype.toString.call(a))
-
-### JS 
+Object.prototype.toString(), 所以一个object可以直接a.toString(). 但是 Array Object, Function Object以及primitive types的toString方法并不能输出类型，所以要用Object.prototype.toString.call(a). 所以统一使用Object.prototype.toString.call(a)比较好。
 
 
 
