@@ -158,13 +158,13 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
   console.log(obj2); // output { name: 'Shawn Li' }
   console.log(str); // output String Primitive
   ```  
-  * 3) typeof operator returns "function"; 而其他非 primitive 的 Object return “object”.
-  * 4） key word "this" (不只是function有，但function里最常用？？？)：the object that "owns" the function.
+  * 3) typeof operator returns "function".
+  * 4） key word "this": the object that "owns" the function. （Construstor的this 指的是这个原型的实例对象.见收藏夹)
 
   注意Invoke Function的四种方法
   * 1） as a function
   * 2） as a object's method
-  * 3） with a Function Method
+  * 3） with a Function Method （call, apply）
 
 
 
@@ -175,6 +175,13 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
 6. Date Object
 7. Math Object
 
+### Checking JS types
+
+1. typeof
+
+2. instanceof
+
+3. toString
 
 
 ### JS references
