@@ -14,9 +14,7 @@ This project aims to create notes for basic javascript syntax and usages (ECMASc
 
 ### Location
 
-## JS String object methods
 
-## JS Array object methods
 
 
 
@@ -120,6 +118,30 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
 4. Undefined
 5. Boolean
 
+### JS Object
+
+  * 1. 除了primitive 类的，所有都是Object
+
+  * 2. "this" in a function: the object that "owns" the function; “this” in an object: the object itselt（Constructor的this指的是这个原型的实例对象.见收藏夹).
+
+  * 3. Object也可以使用for in 来历遍
+   ```javascript
+    var person = {fname:"John", lname:"Doe", age:25}; 
+
+    for (x in person) {
+        txt += person[x];
+    }
+   ``` 
+
+  * 4. Accessing、Adding、Deleting property：
+   ```javascript
+   person.firstName； // access
+   person["firstName"]; // access
+   person.lastName = "Tan"; // add
+   person["lastName"] = "Tan"; // add
+   delete person.lastName; // delete
+   ```  
+
 ### JS Object型 -- Function Object
 
 #### 1. 基本注意事项
@@ -138,8 +160,19 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
    ```
 
 ##### 注意Function Object的特点
-  * 1） 可使用arguments这个object，这样就不用管有几个parameters了；常用的property：arguments.length
-  * 2) Arguments are passed by Value, Objects are passed by Reference(指针)
+  * 1) typeof operator returns "function".
+  * 2） 可使用arguments这个object，这样就不用管有几个parameters了；常用的property：arguments.length
+  ```javascript
+   function sumAll() {
+      var i, sum = 0;
+      for (i = 0; i < arguments.length; i++) {
+         sum += arguments[i];
+      }
+      return sum;
+   }
+   x = sumAll(1, 123, 500, 115, 44, 88);
+  ``` 
+  * 3) Arguments are passed by Value, Objects are passed by Reference(指针)
   ```javascript
   var obj1 = {"name":"Emma"},
       obj2 = {"name":"Shawn"};
@@ -159,9 +192,7 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
   console.log(obj2); // output { name: 'Shawn Li' }
   console.log(str); // output String Primitive
   ```  
-  * 3) typeof operator returns "function".
-  * 4) key word "this": the object that "owns" the function. （Construstor的this 指的是这个原型的实例对象.见收藏夹)
-
+  
 #### 2. Function object methods
 ##### 1) function.prototype.call
 ##### 2) function.prototype.apply
@@ -170,13 +201,13 @@ Most of JS operators are the same with other commonly used languages (eg. Java).
 
 
 
-
-2. String Object
-3. Boolean Object
-4. Number Object
-5. Array Object
-6. Date Object
-7. Math Object
+### JS Object型 -- String Object
+### JS Object型 -- Array Object
+### JS Object型 -- JSON Object
+### JS Object型 -- Date Object
+### JS Object型 -- Math Object
+### JS Object型 -- Boolean Object
+### JS Object型 -- Number Object
 
 ### Checking JS types
 
