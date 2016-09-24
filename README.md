@@ -213,7 +213,7 @@ console.log(myFunction()); // output 0
 ```
 ##### 2) function.prototype.apply
 
-、、、javascript
+```javascript
 var myObject = {
    emma:"Tan"
 }
